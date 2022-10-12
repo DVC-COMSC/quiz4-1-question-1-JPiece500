@@ -25,23 +25,32 @@ switch (num) {
   case 1:
     cout << "Enter the radius of the circle: ";
     cin >> rad;
-  area = pi * pow(rad, 2);
-  cout << setprecision(2) << fixed;
-  cout << "AREA: " << area << endl;
+    if (rad < 0)
+      cout << "INVALID VALUE\n";
+    else 
+      area = pi * pow(rad, 2);
+      cout << setprecision(2) << fixed;
+      cout << "AREA: " << area << endl;
   return (0);
 
   case 2:
     cout << "Enter the LENGTH and WIDTH of the Rectangle: ";
     cin >> L >> W;
   area = L * W;
+    if (area > 0)
   cout << "AREA: " << area << endl;
+    else 
+      cout << "INVALID VALUE\n";
   return (0);
 
   case 3:
     cout << "Enter the BASE and HEIGHT of the Triangle: ";
     cin >> B >> H;
   area = B * H * 0.5;
+   if (area > 0)
   cout << "AREA: " << area << endl;
+    else 
+      cout << "INVALID VALUE\n";
   return (0);
 
   case 4:
